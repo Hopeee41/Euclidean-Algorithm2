@@ -6,6 +6,8 @@ class GCD:
         self.num1 = 0
         self.num2 = 0
         self.remainder = 0
+        self.result = 0
+        self.list1 = []
 
     def valid(self):
         # Check if it is can convert into integer. If yes, continue; If no, print.
@@ -33,9 +35,15 @@ class GCD:
     # When num2 is zero, loop ends. Set the greatest common divisor as num1
     def result(self):
         while self.num2 != 0:
+            self.result = self.num1 // self.num2
             self.remainder = self.num1 % self.num2
+            print(f"{self.num1} = {self.num2} * {self.result} + {self.remainder}")
+            self.list1.append(self.num2)
+            self.list1.append(self.remainder)
+            print(self.list1)
             self.num1 = self.num2
             self.num2 = self.remainder
+            self.list1 = []
         return self.num1
 
 #Input two variables
@@ -49,4 +57,5 @@ gcd_calculator.assign_numbers()
 gcd = gcd_calculator.result()
 
 print(f"The Greatest Common Divisor is: {gcd}")
+
 
