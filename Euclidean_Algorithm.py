@@ -35,14 +35,16 @@ class GCD:
     # When num2 is zero, loop ends. Set the greatest common divisor as num1
     def result(self):
         while self.num2 != 0:
-            self.result = self.num1 // self.num2
-            self.remainder = self.num1 % self.num2
+            self.result = self.num1 // self.num2 #Take the integer part, do not take the decimal number
+            self.remainder = self.num1 % self.num2 #take the remainder
             print(f"{self.num1} = {self.num2} * {self.result} + {self.remainder}")
+            #append two numbers to the list1
             self.list1.append(self.num2)
             self.list1.append(self.remainder)
             print(self.list1)
             self.num1 = self.num2
             self.num2 = self.remainder
+            #let the list1 as empty
             self.list1 = []
         return self.num1
 
