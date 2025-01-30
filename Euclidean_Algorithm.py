@@ -6,7 +6,6 @@ class GCD:
         self.num1 = 0
         self.num2 = 0
         self.remainder = 0
-        self.result = 0
         self.list1 = []
 
     def valid(self):
